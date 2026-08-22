@@ -12,12 +12,11 @@ AI-powered debugging assistant that analyzes code, generates fixes, and verifies
 ---
 
 ### Analyzer
-- Created an Analyzer module using Python dataclasses and regex expressions to transform raw test failures and tracebacks into structured information for further analysis.
+- Created an Analyzer (analyzer.py) module using Python dataclasses and regex expressions to transform raw test failures and tracebacks into structured information for further analysis.
 - The analyzer extracts and classifies key debugging information:
-error_type: The type of exception raised (e.g., AssertionError, IndexError, SyntaxError)
+  - error_type: The type of exception raised (e.g., AssertionError, IndexError, SyntaxError)
   - error_message: The specific error message associated with the failure
   - file_path: The file where the failure occurred, when available
   - line_number: The line where the failure occurred, when available
   - category: A broad classification of the failure, such as Syntax, Runtime, Logic, Dependency, or Timeout
-- Added unit tests to verify error extraction, traceback location parsing, error classification, and input validation.
-All analyzer tests currently pass successfully.
+- Added unit tests (analyzer_test.py) to verify error extraction, traceback location parsing, error classification, and input validation.
